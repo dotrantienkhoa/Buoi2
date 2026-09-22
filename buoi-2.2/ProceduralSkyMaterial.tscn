@@ -1,0 +1,358 @@
+[gd_scene format=3 uid="uid://cfqpndtpgx7nd"]
+
+[ext_resource type="Script" uid="uid://qqq81givutbn" path="res://DayNightCycle.gd" id="1_5oyk4"]
+[ext_resource type="Texture2D" uid="uid://dv4ujmlicbdlw" path="res://assets/meshes/textures/grass_block.png" id="1_b3voh"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hgka"]
+
+[sub_resource type="Sky" id="Sky_v0s4m"]
+sky_material = SubResource("ProceduralSkyMaterial_3hgka")
+
+[sub_resource type="Environment" id="Environment_ql73s"]
+background_mode = 2
+sky = SubResource("Sky_v0s4m")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3voh"]
+albedo_texture = ExtResource("1_b3voh")
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_ql73s"]
+material = SubResource("StandardMaterial3D_b3voh")
+size = Vector3(2, 2, 2)
+
+[node name="Node3D" type="Node3D" unique_id=580291421]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2039125419 node_paths=PackedStringArray("sun")]
+environment = SubResource("Environment_ql73s")
+script = ExtResource("1_5oyk4")
+sun = NodePath("../Sun")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1786394067]
+transform = Transform3D(0.7071067, -0.35355338, -0.61237234, 0, 0.8660254, -0.49999994, 0.7071067, 0.35355338, 0.61237234, 0, 14, 74)
+fov = 118.3
+
+[node name="Ground" type="Node3D" parent="." unique_id=1391135147]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=547038935]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0, 40)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Ground" unique_id=1786632706]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 0, 40)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Ground" unique_id=1339738165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, 40)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Ground" unique_id=1573398243]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 0, 40)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Ground" unique_id=995473549]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0, 42)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Ground" unique_id=957559635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 0, 42)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Ground" unique_id=629234769]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, 42)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Ground" unique_id=2005272336]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 0, 42)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Ground" unique_id=1387089331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0, 44)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Ground" unique_id=454225376]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 0, 44)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="Ground" unique_id=686674366]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, 44)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="Ground" unique_id=501504380]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 0, 44)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="Ground" unique_id=1939812979]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0, 46)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="Ground" unique_id=551976415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 0, 46)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="Ground" unique_id=2136744186]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, 46)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="Ground" unique_id=813374025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 0, 46)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="Ground" unique_id=1118766789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, 40)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="Ground" unique_id=1558504746]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, 40)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="Ground" unique_id=302794016]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41, 0, 40)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D20" type="MeshInstance3D" parent="Ground" unique_id=1586620548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 0, 40)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D21" type="MeshInstance3D" parent="Ground" unique_id=1301846008]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, 42)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D22" type="MeshInstance3D" parent="Ground" unique_id=1464859654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, 42)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D23" type="MeshInstance3D" parent="Ground" unique_id=211927911]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41, 0, 42)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D24" type="MeshInstance3D" parent="Ground" unique_id=767424722]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 0, 42)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D25" type="MeshInstance3D" parent="Ground" unique_id=453852844]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, 44)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D26" type="MeshInstance3D" parent="Ground" unique_id=2116772616]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, 44)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D27" type="MeshInstance3D" parent="Ground" unique_id=130202700]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41, 0, 44)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D28" type="MeshInstance3D" parent="Ground" unique_id=1781893238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 0, 44)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D29" type="MeshInstance3D" parent="Ground" unique_id=1249598756]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, 46)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D30" type="MeshInstance3D" parent="Ground" unique_id=1030563885]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, 46)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D31" type="MeshInstance3D" parent="Ground" unique_id=1548909844]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41, 0, 46)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D32" type="MeshInstance3D" parent="Ground" unique_id=204589753]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 0, 46)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D33" type="MeshInstance3D" parent="Ground" unique_id=555381616]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0, 48)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D34" type="MeshInstance3D" parent="Ground" unique_id=141747270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 0, 48)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Ground" unique_id=696877698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, 48)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D36" type="MeshInstance3D" parent="Ground" unique_id=1041348648]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 0, 48)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D37" type="MeshInstance3D" parent="Ground" unique_id=119290256]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0, 50)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D38" type="MeshInstance3D" parent="Ground" unique_id=1747021169]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 0, 50)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D39" type="MeshInstance3D" parent="Ground" unique_id=37390726]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, 50)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D40" type="MeshInstance3D" parent="Ground" unique_id=599866102]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 0, 50)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D41" type="MeshInstance3D" parent="Ground" unique_id=614934149]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0, 52)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D42" type="MeshInstance3D" parent="Ground" unique_id=553080832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 0, 52)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D43" type="MeshInstance3D" parent="Ground" unique_id=1305644859]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, 52)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D44" type="MeshInstance3D" parent="Ground" unique_id=241348736]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 0, 52)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D45" type="MeshInstance3D" parent="Ground" unique_id=2144244729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0, 54)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D46" type="MeshInstance3D" parent="Ground" unique_id=660600869]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 0, 54)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D47" type="MeshInstance3D" parent="Ground" unique_id=1539965263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, 54)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D48" type="MeshInstance3D" parent="Ground" unique_id=1631742503]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 0, 54)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D49" type="MeshInstance3D" parent="Ground" unique_id=1394133452]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, 48)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D50" type="MeshInstance3D" parent="Ground" unique_id=820705574]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, 48)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D51" type="MeshInstance3D" parent="Ground" unique_id=798598515]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41, 0, 48)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D52" type="MeshInstance3D" parent="Ground" unique_id=1355008173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 0, 48)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D53" type="MeshInstance3D" parent="Ground" unique_id=1179593208]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, 50)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D54" type="MeshInstance3D" parent="Ground" unique_id=536770465]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, 50)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D55" type="MeshInstance3D" parent="Ground" unique_id=260384389]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41, 0, 50)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D56" type="MeshInstance3D" parent="Ground" unique_id=1140470268]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 0, 50)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D57" type="MeshInstance3D" parent="Ground" unique_id=480007656]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, 52)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D58" type="MeshInstance3D" parent="Ground" unique_id=1173727432]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, 52)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D59" type="MeshInstance3D" parent="Ground" unique_id=1974344033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41, 0, 52)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D60" type="MeshInstance3D" parent="Ground" unique_id=193062965]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 0, 52)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D61" type="MeshInstance3D" parent="Ground" unique_id=62127541]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, 54)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D62" type="MeshInstance3D" parent="Ground" unique_id=483208222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, 54)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D63" type="MeshInstance3D" parent="Ground" unique_id=295913270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41, 0, 54)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D64" type="MeshInstance3D" parent="Ground" unique_id=1953829965]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 0, 54)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D65" type="MeshInstance3D" parent="Ground" unique_id=1760058778]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 2, 48)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D66" type="MeshInstance3D" parent="Ground" unique_id=1378811046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 2, 48)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D67" type="MeshInstance3D" parent="Ground" unique_id=156706113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 2, 48)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D68" type="MeshInstance3D" parent="Ground" unique_id=2048105556]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 4, 48)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D69" type="MeshInstance3D" parent="Ground" unique_id=1315488537]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 6, 48)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D71" type="MeshInstance3D" parent="Ground" unique_id=818185059]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 6, 46)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D72" type="MeshInstance3D" parent="Ground" unique_id=519283280]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 6, 44)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D73" type="MeshInstance3D" parent="Ground" unique_id=858956957]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 6, 42)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D70" type="MeshInstance3D" parent="Ground" unique_id=68920655]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 2, 48)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D74" type="MeshInstance3D" parent="Ground" unique_id=1698795491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 6, 48)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D75" type="MeshInstance3D" parent="Ground" unique_id=1525811839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 6, 46)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D76" type="MeshInstance3D" parent="Ground" unique_id=1017221682]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 6, 44)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D77" type="MeshInstance3D" parent="Ground" unique_id=1969335892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 6, 42)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="MeshInstance3D78" type="MeshInstance3D" parent="Ground" unique_id=1099004390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 2, 48)
+mesh = SubResource("BoxMesh_ql73s")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=886075955]
+transform = Transform3D(0.8535534, -0.14644662, 0.5, -0.50000006, -0.50000006, 0.70710677, 0.14644663, -0.8535534, -0.5, 0, 28, 0)
+light_energy = 1.2
+shadow_enabled = true
+
+[node name="Moon" type="DirectionalLight3D" parent="." unique_id=912495853]
+transform = Transform3D(0.8535534, -0.14644662, 0.5, -0.50000006, -0.50000006, 0.70710677, 0.14644663, -0.8535534, -0.5, 0, 28, 0)
+light_energy = 0.25
+shadow_enabled = true
+sky_mode = 1
